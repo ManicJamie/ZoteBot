@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ZoteBot"
+version = "1.0.0"
+description = "A bot for HKSRC to post pasta."
+readme = "README.md"
+
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+
+maintainers = [
+  {name = "Jamie", email = "jamie.on.twitch@gmail.com"},
+]
+
+dependencies = [
+  "discord.py",
+  "PyYaml"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "src"
+]
+
+[project.optional-dependencies]
+
+[project.urls]
+"Homepage" = "https://github.com/ManicJamie/ZoteBot"
+"Bug Reports" = "https://github.com/ManicJamie/ZoteBot/issues"

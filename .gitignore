@@ -1,0 +1,8 @@
+config.json
+save.json
+
+*.log
+
+__pycache__/
+.vscode
+.venv
