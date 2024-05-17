@@ -5,7 +5,7 @@ import config
 
 def save():
     with open(f"{config.path}/save.json", "w") as f:
-        json.dump(SAVE_DICT, f)
+        json.dump(SAVE_DICT, f, indent=4)
 
 
 if os.path.exists(f"{config.path}/save.json"):
