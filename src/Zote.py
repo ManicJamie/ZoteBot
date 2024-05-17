@@ -55,13 +55,13 @@ class BaseCog(Cog):
     """Base commands for ZoteBot."""
     def __init__(self, bot: ZoteBot) -> None:
         self.bot = bot
+        super().__init__()
         for name, content in save.PASTAS.items():
             try:
                 cmd = self.get_plain_command(name, content)
                 self.bot.add_command(cmd)
             except CommandRegistrationError as e:
                 logging.error(f"Command {e.name} was already registered!")
-        super().__init__()
     
     def get_plain_command(self, name: str, content: str):
         async def plain_cmd(context: Context):
